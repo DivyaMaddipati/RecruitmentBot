@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { UserDashboard, AdminDashboard, MCQs } from "./pages";
+import { UserDashboard, AdminDashboard, MCQs, CodingRound } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
             path: "test",
             element: <MCQs />,
           },
+          { path: "code", element: <CodingRound /> },
         ],
       },
       {
