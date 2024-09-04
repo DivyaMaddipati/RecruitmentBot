@@ -19,7 +19,7 @@ export default function UserDashboard() {
     })
       .then((response) => {
         //handle success
-        navigate("/u/round1");
+        navigate("/u/test");
         console.log(response);
       })
       .catch((response) => {

@@ -5,6 +5,8 @@ import morgan from "morgan";
 import multer from "multer";
 import uploadResume from "./controllers/uploadResume.js";
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 dotenv.config();
@@ -26,7 +28,6 @@ if (!fs.existsSync("resumes")) {
     if (err) console.log(err);
   });
 }
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "resumes/");
@@ -36,7 +37,23 @@ const storage = multer.diskStorage({
     // cb(null, file.fieldname + ".pdf");
   },
 });
-
 const upload = multer({ storage: storage });
-
 app.post("/upload-resume", upload.single("resume"), uploadResume);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const filePath = path.join(__dirname, "questions.json");
+app.get("/test-questions", (req, res) => {
+  fs.readFile(filePath, "utf8", (err, data) => {
+    console.log("reading");
+
+    if (err) {
+      // return res.status(500).send("Error reading file");
+      console.log(err);
+    }
+    const jsonData = JSON.parse(data);
+    console.log(jsonData);
+
+    res.json(jsonData);
+  });
+});

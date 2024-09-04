@@ -1,0 +1,212 @@
+[
+  {
+    "section": "Basic Aptitude Skills",
+    "questions": [
+      {
+        "question": "Which number comes next in the series: 2, 6, 12, 20, 30?",
+        "options": ["36", "40", "42", "50"],
+        "answer": "42"
+      },
+      {
+        "question": "If a train travels 60 miles in 1 hour, how long will it take to travel 180 miles at the same speed?",
+        "options": ["2 hours", "3 hours", "4 hours", "5 hours"],
+        "answer": "3 hours"
+      },
+      {
+        "question": "If the price of a product is increased by 20%, and then decreased by 20%, what is the net change in the price?",
+        "options": ["No change", "2% increase", "2% decrease", "4% decrease"],
+        "answer": "4% decrease"
+      },
+      {
+        "question": "Find the odd one out: Apple, Banana, Carrot, Mango.",
+        "options": ["Apple", "Banana", "Carrot", "Mango"],
+        "answer": "Carrot"
+      },
+      {
+        "question": "If x = 3, what is the value of 2x² + 3x - 5?",
+        "options": ["10", "16", "22", "28"],
+        "answer": "22"
+      },
+      {
+        "question": "A man walks 5 km east, then 3 km north, then 2 km west. How far is he from the starting point?",
+        "options": ["3 km", "4 km", "5 km", "6 km"],
+        "answer": "4 km"
+      },
+      {
+        "question": "Which of the following fractions is the largest?",
+        "options": ["1/3", "1/4", "2/5", "3/7"],
+        "answer": "2/5"
+      },
+      {
+        "question": "What is the missing number in the sequence: 7, 14, __, 42, 56?",
+        "options": ["21", "28", "35", "49"],
+        "answer": "28"
+      },
+      {
+        "question": "If 5x - 3 = 2x + 12, what is the value of x?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "5"
+      },
+      {
+        "question": "What is the least common multiple (LCM) of 12 and 18?",
+        "options": ["36", "48", "54", "72"],
+        "answer": "36"
+      }
+    ]
+  },
+  {
+    "section": "Basic Technical Skills",
+    "questions": [
+      {
+        "question": "Which programming language is known for its use in backend development and has a 'batteries included' philosophy?",
+        "options": ["JavaScript", "Python", "Ruby", "PHP"],
+        "answer": "Python"
+      },
+      {
+        "question": "What is the time complexity of a binary search algorithm?",
+        "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+        "answer": "O(log n)"
+      },
+      {
+        "question": "Which of the following is NOT a relational database management system (RDBMS)?",
+        "options": ["MySQL", "PostgreSQL", "MongoDB", "Oracle"],
+        "answer": "MongoDB"
+      },
+      {
+        "question": "What does REST stand for in RESTful API?",
+        "options": [
+          "Representational State Transfer",
+          "Remote State Transfer",
+          "Representational Simple Transfer",
+          "Remote Simple Transfer"
+        ],
+        "answer": "Representational State Transfer"
+      },
+      {
+        "question": "Which HTML tag is used to create a hyperlink?",
+        "options": ["<link>", "<a>", "<href>", "<url>"],
+        "answer": "<a>"
+      },
+      {
+        "question": "Which command is used to initialize a Git repository?",
+        "options": ["git start", "git init", "git create", "git new"],
+        "answer": "git init"
+      },
+      {
+        "question": "In CSS, what does the 'float' property do?",
+        "options": [
+          "Aligns elements horizontally",
+          "Aligns elements vertically",
+          "Makes an element sticky",
+          "Removes an element from the document flow"
+        ],
+        "answer": "Aligns elements horizontally"
+      },
+      {
+        "question": "Which of the following is a NoSQL database?",
+        "options": ["PostgreSQL", "MySQL", "Oracle", "MongoDB"],
+        "answer": "MongoDB"
+      },
+      {
+        "question": "Which JavaScript framework/library is used for building user interfaces, especially for single-page applications?",
+        "options": ["Angular", "Vue.js", "React", "Ember"],
+        "answer": "React"
+      },
+      {
+        "question": "What is the main purpose of unit testing in software development?",
+        "options": [
+          "Test the entire system",
+          "Test individual components",
+          "Test the user interface",
+          "Test performance"
+        ],
+        "answer": "Test individual components"
+      }
+    ]
+  },
+  {
+    "section": "Niche Technical Skills",
+    "questions": [
+      {
+        "question": "Which of the following backend frameworks is known for its speed and simplicity and is written in Python?",
+        "options": ["Django", "Flask", "Spring", "Express"],
+        "answer": "Flask"
+      },
+      {
+        "question": "What is the primary use of Docker in software development?",
+        "options": [
+          "Virtualization",
+          "Containerization",
+          "Database management",
+          "Version control"
+        ],
+        "answer": "Containerization"
+      },
+      {
+        "question": "Which cloud platform provides services like EC2, S3, and Lambda?",
+        "options": ["Google Cloud", "Azure", "AWS", "IBM Cloud"],
+        "answer": "AWS"
+      },
+      {
+        "question": "In React, what is the purpose of using 'useState'?",
+        "options": [
+          "Manage component state",
+          "Handle side effects",
+          "Perform API calls",
+          "Manage lifecycle methods"
+        ],
+        "answer": "Manage component state"
+      },
+      {
+        "question": "Which of the following is a popular container orchestration tool?",
+        "options": ["Docker", "Kubernetes", "Ansible", "Terraform"],
+        "answer": "Kubernetes"
+      },
+      {
+        "question": "Which version control system is widely used for managing code repositories?",
+        "options": ["SVN", "Git", "Mercurial", "Perforce"],
+        "answer": "Git"
+      },
+      {
+        "question": "What does 'CI/CD' stand for in DevOps?",
+        "options": [
+          "Continuous Integration/Continuous Deployment",
+          "Code Integration/Code Deployment",
+          "Continuous Improvement/Continuous Delivery",
+          "Code Improvement/Code Deployment"
+        ],
+        "answer": "Continuous Integration/Continuous Deployment"
+      },
+      {
+        "question": "Which of the following is a common use case for a NoSQL database like MongoDB?",
+        "options": [
+          "Transactional systems",
+          "Data warehousing",
+          "Content management",
+          "Relational data storage"
+        ],
+        "answer": "Content management"
+      },
+      {
+        "question": "What is the purpose of 'useEffect' in React?",
+        "options": [
+          "Manage component state",
+          "Handle side effects",
+          "Perform API calls",
+          "Manage lifecycle methods"
+        ],
+        "answer": "Handle side effects"
+      },
+      {
+        "question": "In Kubernetes, what is a 'Pod'?",
+        "options": [
+          "A container image",
+          "A single instance of an application",
+          "A group of one or more containers",
+          "A node in the cluster"
+        ],
+        "answer": "A group of one or more containers"
+      }
+    ]
+  }
+]
