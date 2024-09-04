@@ -42,9 +42,25 @@ app.post("/upload-resume", upload.single("resume"), uploadResume);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const filePath = path.join(__dirname, "questions.json");
+const questionsFilePath = path.join(__dirname, "questions.json");
 app.get("/test-questions", (req, res) => {
-  fs.readFile(filePath, "utf8", (err, data) => {
+  fs.readFile(questionsFilePath, "utf8", (err, data) => {
+    console.log("reading");
+
+    if (err) {
+      // return res.status(500).send("Error reading file");
+      console.log(err);
+    }
+    const jsonData = JSON.parse(data);
+    // console.log(jsonData);
+
+    res.json(jsonData);
+  });
+});
+
+const candidatesFilePath = path.join(__dirname, "candidates.json");
+app.get("/candidates-data", (req, res) => {
+  fs.readFile(candidatesFilePath, "utf8", (err, data) => {
     console.log("reading");
 
     if (err) {

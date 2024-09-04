@@ -1,0 +1,72 @@
+[
+  {
+    "name": "John Doe",
+    "ranking": 1,
+    "resume_matching_percentage": 92.5,
+    "mcq_score": 28,
+    "programming_score": 9
+  },
+  {
+    "name": "Jane Smith",
+    "ranking": 2,
+    "resume_matching_percentage": 89.0,
+    "mcq_score": 26,
+    "programming_score": 8
+  },
+  {
+    "name": "Alice Johnson",
+    "ranking": 3,
+    "resume_matching_percentage": 87.3,
+    "mcq_score": 27,
+    "programming_score": 7
+  },
+  {
+    "name": "Robert Brown",
+    "ranking": 4,
+    "resume_matching_percentage": 85.6,
+    "mcq_score": 25,
+    "programming_score": 8
+  },
+  {
+    "name": "Emily Davis",
+    "ranking": 5,
+    "resume_matching_percentage": 83.2,
+    "mcq_score": 24,
+    "programming_score": 7
+  },
+  {
+    "name": "Michael Wilson",
+    "ranking": 6,
+    "resume_matching_percentage": 81.7,
+    "mcq_score": 23,
+    "programming_score": 6
+  },
+  {
+    "name": "Jessica Taylor",
+    "ranking": 7,
+    "resume_matching_percentage": 80.5,
+    "mcq_score": 22,
+    "programming_score": 5
+  },
+  {
+    "name": "David Lee",
+    "ranking": 8,
+    "resume_matching_percentage": 78.9,
+    "mcq_score": 21,
+    "programming_score": 6
+  },
+  {
+    "name": "Daniel Martin",
+    "ranking": 9,
+    "resume_matching_percentage": 77.4,
+    "mcq_score": 20,
+    "programming_score": 5
+  },
+  {
+    "name": "Sarah Clark",
+    "ranking": 10,
+    "resume_matching_percentage": 75.8,
+    "mcq_score": 19,
+    "programming_score": 4
+  }
+]

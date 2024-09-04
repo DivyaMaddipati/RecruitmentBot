@@ -81,6 +81,7 @@ export default function UserDashboard() {
           </form>
         </div>
       </div>
+      <button onClick={() => navigate("/a")}>Go to Admin panel</button>
     </section>
   );
 }
