@@ -52,7 +52,7 @@ app.get("/test-questions", (req, res) => {
       console.log(err);
     }
     const jsonData = JSON.parse(data);
-    console.log(jsonData);
+    // console.log(jsonData);
 
     res.json(jsonData);
   });
