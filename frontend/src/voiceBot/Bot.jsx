@@ -6,6 +6,7 @@ import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
 import { useUserProgress } from "../contexts/userProgressContext";
 import { useNavigate } from "react-router-dom";
+import VideoRecorder from "../components/Video";
 
 const Container = styled.div`
   text-align: center;
@@ -189,10 +190,10 @@ function Bot() {
         {currentPhase === "interview" && (
           <>
             <Question text={questions[currentQuestion]} />
-            <ResponseRecorder
+            {/* <ResponseRecorder
               onResponse={handleResponse}
               isRecording={isRecording}
-            />
+            /> */}
           </>
         )}
         {currentPhase === "completed" && (
@@ -205,6 +206,7 @@ function Bot() {
           </>
         )}
       </div>
+      <VideoRecorder />
       <button
         onClick={() => {
           changeUserProgress(4);
