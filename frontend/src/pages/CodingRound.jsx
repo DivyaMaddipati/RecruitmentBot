@@ -1,45 +1,25 @@
 import { Editor } from "@monaco-editor/react";
-import axios from "axios";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useUserProgress } from "../contexts/userProgressContext";
 
 export default function CodingRound() {
   const [language, setLanguage] = useState("javascript");
   const [code, setCode] = useState("// Start coding here...");
+  const { changeUserProgress } = useUserProgress();
 
-  useEffect(() => {
-    axios({
-      method: "post",
-      url: "https://emkc.org/api/v2/piston/execute",
-      data: {
-        language: language,
-        version: "1.32.3",
-        files: [
-          {
-            content: code,
-          },
-        ],
-      },
-      headers: { "Content-Type": "multipart/form-data" },
-    })
-      .then((response) => {
-        //handle success
-        console.log(response);
-      })
-      .catch((response) => {
-        //handle error
-        console.log(response);
-      });
-  }, [language, code]);
+  const navigate = useNavigate();
 
   return (
     <section className="min-h-screen bg-gray-100 flex flex-col items-center p-4">
       <header className="w-full max-w-7xl mb-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-800">
-          Coding Round
-        </h1>
+        <h1 className="text-2xl font-bold text-gray-800">Coding Round</h1>
         {/* Language Dropdown */}
         <div className="relative">
-          <label htmlFor="language" className="mr-2 font-semibold text-gray-700">
+          <label
+            htmlFor="language"
+            className="mr-2 font-semibold text-gray-700"
+          >
             Language:
           </label>
           <select
@@ -67,6 +47,14 @@ export default function CodingRound() {
           }}
           theme="vs-dark"
         />
+        <button
+          onClick={() => {
+            changeUserProgress(3);
+            navigate("/u/voice");
+          }}
+        >
+          Submit
+        </button>
       </div>
     </section>
   );

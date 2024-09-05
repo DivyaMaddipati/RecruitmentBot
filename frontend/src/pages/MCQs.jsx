@@ -1,9 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Question from "../components/Question";
+import { useNavigate } from "react-router-dom";
+import { useUserProgress } from "../contexts/userProgressContext";
 
 export default function MCQs() {
   const [questions, setQuestions] = useState([]);
+  const navigate = useNavigate();
+  const { changeUserProgress } = useUserProgress();
 
   useEffect(() => {
     axios
@@ -46,6 +50,14 @@ export default function MCQs() {
           </section>
         ))}
       </div>
+      <button
+        onClick={() => {
+          changeUserProgress(2);
+          navigate("/u/code");
+        }}
+      >
+        Submit
+      </button>
     </section>
   ) : (
     <section className="min-h-screen bg-gray-100 flex items-center justify-center">

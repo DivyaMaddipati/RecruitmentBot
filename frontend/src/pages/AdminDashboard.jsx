@@ -53,7 +53,7 @@ export default function AdminDashboard() {
                   <td className="py-3 px-6">{candidate.mcq_score}</td>
                   <td className="py-3 px-6">{candidate.programming_score}</td>
                   <td className="py-3 px-6 font-semibold">
-                    {candidate.total_score}
+                    {candidate.final_score}
                   </td>
                 </tr>
               ))}

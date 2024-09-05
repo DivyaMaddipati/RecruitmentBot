@@ -3,11 +3,13 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import profileImage from "./profile.jpg";
+import { useUserProgress } from "../contexts/userProgressContext";
 
 export default function UserDashboard() {
   const { handleSubmit, register } = useForm();
   const id = useId();
   const navigate = useNavigate();
+  const { changeUserProgress } = useUserProgress();
 
   const submit = async (data) => {
     console.log(data.resume);
@@ -23,6 +25,7 @@ export default function UserDashboard() {
       .then((response) => {
         //handle success
         navigate("/u/test");
+        changeUserProgress(1);
         console.log(response);
       })
       .catch((response) => {
