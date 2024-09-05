@@ -13,6 +13,13 @@ const Container = styled.div`
   padding: 20px;
 `;
 
+const VideoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
 const IntroMessage = styled.div`
   font-size: 24px;
   color: #333;
@@ -206,7 +213,9 @@ function Bot() {
           </>
         )}
       </div>
-      <VideoRecorder />
+      <VideoContainer>
+        <VideoRecorder />
+      </VideoContainer>
       <button
         onClick={() => {
           changeUserProgress(4);
