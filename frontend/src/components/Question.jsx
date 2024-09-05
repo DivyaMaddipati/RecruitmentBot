@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 export default function Question({ question }) {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("");
 
-  const handleOptionChange = (index) => {
-    setSelectedOption(index);
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
   };
 
   return (
@@ -15,17 +15,17 @@ export default function Question({ question }) {
       {/* Render options with labels (a, b, c, d) and radio buttons */}
       <ul className="space-y-2">
         {question.options.map((option, index) => (
-          <li key={index} className="flex items-center space-x-2 text-left">
+          <li key={option} className="flex items-center space-x-2 text-left">
             <input
               type="radio"
-              id={`option-${index}`}
+              id={`option-${option}`}
               name={`question-${question.id}`}
-              value={index}
-              checked={selectedOption === index}
-              onChange={() => handleOptionChange(index)}
+              value={option}
+              checked={selectedOption === option}
+              onChange={() => handleOptionChange(option)}
               className="form-radio text-blue-600"
             />
-            <label htmlFor={`option-${index}`} className="flex items-center">
+            <label htmlFor={`option-${option}`} className="flex items-center">
               <span className="font-bold mr-2">
                 {String.fromCharCode(97 + index)}.
               </span>
@@ -37,8 +37,3 @@ export default function Question({ question }) {
     </div>
   );
 }
-
-
-
-
-

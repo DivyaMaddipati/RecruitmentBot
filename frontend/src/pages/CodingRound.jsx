@@ -1,10 +1,14 @@
 import { Editor } from "@monaco-editor/react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useUserProgress } from "../contexts/userProgressContext";
+import { useNavigate } from "react-router-dom";
 
 export default function CodingRound() {
   const [language, setLanguage] = useState("javascript");
   const [code, setCode] = useState("// Start coding here...");
+  const { changeUserProgress } = useUserProgress();
+  const navigate = useNavigate();
   const [problem, setProblem] = useState({
     title: "Two Sum",
     description:
@@ -61,7 +65,10 @@ export default function CodingRound() {
         <h1 className="text-2xl font-bold text-gray-800">Coding Round</h1>
         {/* Language Dropdown */}
         <div className="relative">
-          <label htmlFor="language" className="mr-2 font-semibold text-gray-700">
+          <label
+            htmlFor="language"
+            className="mr-2 font-semibold text-gray-700"
+          >
             Language:
           </label>
           <select
@@ -83,7 +90,9 @@ export default function CodingRound() {
       <div className="w-full max-w-7xl mx-auto bg-white rounded-lg shadow-lg flex">
         {/* Left pane: coding problem */}
         <div className="w-1/3 p-4 border-r border-gray-300 text-left">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">{problem.title}</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            {problem.title}
+          </h2>
           <p className="mb-4 text-base leading-relaxed text-gray-700 whitespace-pre-wrap">
             {problem.description}
           </p>
@@ -130,6 +139,14 @@ export default function CodingRound() {
           />
         </div>
       </div>
+      <button
+        onClick={() => {
+          changeUserProgress(3);
+          navigate("/u/voice");
+        }}
+      >
+        Submit
+      </button>
     </section>
   );
 }
