@@ -7,21 +7,21 @@ import { UserProgressProvider } from "./contexts/userProgressContext";
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
-    if (location.pathname == "/") {
+    if (location.pathname === "/") {
       navigate("/u");
     }
-  }, []);
+  }, [location, navigate]);
+
   return (
     <UserProgressProvider>
-      <section>
+      <div style={{ paddingTop: '80px' }}> {/* Adjust this value based on header height */}
         {location.pathname !== "/a" && <Progress />}
-
         <Outlet />
-      </section>
+      </div>
     </UserProgressProvider>
   );
 }
+
 export default App;
